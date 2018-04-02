@@ -12,6 +12,7 @@ module.exports = merge(config,{
         hot: true,
         host: 'localhost',
         port: 9000,
+        compress: false
     },
     plugins:[
         new webpack.HotModuleReplacementPlugin(),

@@ -1,6 +1,8 @@
 {
   "include": [
-    "src/**/*.ts"
+    "src/**/*.ts",
+    "demo/**/*.ts",
+    "demo/**/*.vue"
   ],
   "exclude": [
     "node_modules"
@@ -12,14 +14,13 @@
     "module": "es2015",
     "target": "es5",
     "moduleResolution": "node",
-    "experimentalDecorators": true,
     "isolatedModules": true,
     "lib": [
       "dom",
       "es5",
       "es2015.promise"
     ],
-    "sourceMap": true,
+    "sourceMap": false,
     "pretty": true
   }
 }

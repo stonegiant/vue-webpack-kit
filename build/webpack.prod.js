@@ -15,13 +15,23 @@ module.exports = merge(config, {
             minChunks: 1,
             maxAsyncRequests: 5,
             maxInitialRequests: 3,
-            name: true
+            name: false,
+            cacheGroups: {
+                vendor: {
+                  test: /node_modules/,
+                  chunks: 'initial',
+                  name: 'vendor',
+                  priority: 10,
+                  enforce: true
+                }
+            },
+            runtimeChunk: true
         }),
         // 清理旧文件
         new CleanWebpackPlugin('dist',{
             root: path.resolve(__dirname,'../')
         }),
         // 压缩代码
-        new UglifyJSPlugin()
+        // new UglifyJSPlugin()
     ]
 });
